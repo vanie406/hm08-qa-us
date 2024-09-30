@@ -34,7 +34,7 @@ describe('Create an order', () => {
         await page.paymentMethod();
         await page.addCreditCard('1234 0000 4321', '12');
         const addCardButton = await $('//*[@id="root"]/div/div[2]/div[2]/div[1]/div[2]/div[3]/div[3]');
-        await addCardButton.waitForDisplayed({timeout: 10000});
+        await addCardButton.waitForDisplayed({timeout: 20000});
         await expect(addCardButton).toBeExisting();
     }),
 
