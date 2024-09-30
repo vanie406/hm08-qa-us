@@ -93,7 +93,8 @@ describe('Create an order', () => {
         await orderButton.click();
         const carSearchModals = await $('div.order.shown');
         await carSearchModals.waitForDisplayed({ timeout: 30000 });
-        await browser.pause(20000); 
+        await browser.pause(30000); 
+
         const driverRating = await $('div.order-btn-rating');
         await driverRating.waitForDisplayed({ timeout: 10000 });
         const driverName = await $('div.order-btn-group div:nth-child(2)');

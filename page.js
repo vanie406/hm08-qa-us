@@ -122,7 +122,7 @@ module.exports = {
         await blanketCheckbox.waitForDisplayed();
         await blanketCheckbox.waitForClickable();
         await blanketCheckbox.click();
-        await browser.pause(500);
+        await browser.pause(500)
     },
  
     orderIcecream: async function() {
