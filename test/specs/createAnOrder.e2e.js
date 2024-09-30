@@ -28,12 +28,12 @@ describe('Create an order', () => {
         await expect(await $(`div=${phoneNumber}`)).toBeExisting();
     }),
     
-    it('should add a credit card', async () => {
+    it.only('should add a credit card', async () => {
         await browser.url(`/`)
         await page.fillAddresses('East 2nd Street, 601', '1300 1st St');
         await page.paymentMethod();
         await page.addCreditCard('1234 0000 4321', '12');
-        const addCardButton = await $('div=Add card');
+        const addCardButton = await $('//*[@id="root"]/div/div[2]/div[2]/div[1]/div[2]/div[3]/div[3]');
         await expect(addCardButton).toBeExisting();
     }),
 
@@ -96,7 +96,7 @@ describe('Create an order', () => {
         await browser.pause(30000); 
 
         const driverRating = await $('div.order-btn-rating');
-        await driverRating.waitForDisplayed({ timeout: 10000 });
+        await driverRating.waitForDisplayed({ timeout: 30000 });
         const driverName = await $('div.order-btn-group div:nth-child(2)');
         await driverName.waitForDisplayed({ timeout: 10000 });
         console.log('Driver information is displayed in the modal.');

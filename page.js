@@ -13,7 +13,7 @@ module.exports = {
     nextButton: 'button=Next',
     confirmButton: 'button=Confirm',
     supportivePlanButton: 'img[alt="Supportive"]',
-    addCardButton: 'div=Add card',
+    addCardButton: '//*[@id="root"]/div/div[2]/div[2]/div[1]/div[2]/div[3]/div[3]',
     paymentMethodButton: '.pp-button', 
     linkButton: 'button=Link',
 
