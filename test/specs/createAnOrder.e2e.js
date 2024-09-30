@@ -74,7 +74,7 @@ describe('Create an order', () => {
         await expect(itemCount).toHaveText('2');
     }),
 
-    it.only('should display car search modals', async () => {
+    it('should display car search modals', async () => {
         await browser.url(`/`)
         await page.fillAddresses('East 2nd street, 601', '1300 1st St');
         const orderButton = await $('.smart-button');
