@@ -24,3 +24,7 @@ jobs:
       run: npm run lint
     - name: Run tests
       run: npm run wdio
+    - name: Set up Firefox
+      uses: mozilla/actions/setup-firefox@v1
+      with:
+        version: latest
