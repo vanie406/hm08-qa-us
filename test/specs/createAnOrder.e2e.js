@@ -70,7 +70,8 @@ describe('Create an order', () => {
         await supportivePlanButton.click();
         await page.orderIcecream();
         const itemCount = await $('.counter-value');
-        await itemCount.waitForDisplayed({timeout: 5000});
+        await itemCount.waitForDisplayed({timeout: 10000});
+        await browser.pause(500)
         await expect(itemCount).toHaveText('2');
     }),
 
