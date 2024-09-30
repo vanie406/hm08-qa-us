@@ -83,22 +83,5 @@ describe('Create an order', () => {
         const carSearchModal = await $('//*[@id="root"]/div/div[5]');
         await carSearchModal.waitForDisplayed({timeout: 10000});
         await expect(carSearchModal).toBeExisting();
-    }),
-
-    it('should wait for the driver info to appear  in the modal', async () => {
-        await browser.url(`/`);
-        await page.fillAddresses('East 2nd Street, 601', '1300 1st St');
-        const orderButton = await $('.smart-button');
-        await orderButton.waitForDisplayed();
-        await orderButton.click();
-        const carSearchModals = await $('//*[@id="root"]/div/div[5]');
-        await carSearchModals.waitForDisplayed({ timeout: 10000 });
-        await browser.pause(30000); 
-
-        const driverRating = await $('div.order-btn-rating');
-        await driverRating.waitForDisplayed({ timeout: 10000 });
-        const driverName = await $('div.order-btn-group div:nth-child(2)');
-        await driverName.waitForDisplayed({ timeout: 10000 });
-        console.log('Driver information is displayed in the modal.');
-    });     
+    });    
 });

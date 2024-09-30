@@ -33,10 +33,6 @@ module.exports = {
     messagefield: '#messagefield',
     //Modal for Car Search and Driver Info
     carSearchModal: '//*[@id="root"]/div/div[5]',
-   //Driver Elements
-    driverName: 'div.order-btn-group div:nth-child(2)',
-    driverRating: 'div.order-btn-rating',
-
 
     // Functions 
     fillAddresses: async function(from, to) {
