@@ -22,9 +22,9 @@ jobs:
       run: npm i
     - name: Run eslint
       run: npm run lint
-    - name: Run tests
-      run: npm run wdio
     - name: Set up Firefox
-      uses: mozilla/actions/setup-firefox@v1
+      uses: mozilla/setup-firefox@v1
       with:
         version: latest
+    - name: Run tests
+      run: npm run wdio
