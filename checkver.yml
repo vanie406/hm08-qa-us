@@ -1,0 +1,4 @@
+- name: Set up Firefox
+  uses: mozilla/actions/setup-firefox@v1
+  with:
+    version: latest
