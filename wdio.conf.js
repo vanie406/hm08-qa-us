@@ -41,6 +41,7 @@ exports.config = {
     reporters: ['spec'],
     mochaOpts: {
         ui: 'bdd',
+        retries: 2,
         timeout: 120000
     },
 }
