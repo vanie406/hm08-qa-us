@@ -96,7 +96,7 @@ describe('Create an order', () => {
         await browser.pause(30000); 
 
         const driverRating = await $('div.order-btn-rating');
-        await driverRating.waitForDisplayed({ timeout: 30000 });
+        await driverRating.waitForDisplayed({ timeout: 10000 });
         const driverName = await $('div.order-btn-group div:nth-child(2)');
         await driverName.waitForDisplayed({ timeout: 10000 });
         console.log('Driver information is displayed in the modal.');
