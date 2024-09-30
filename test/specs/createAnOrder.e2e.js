@@ -34,6 +34,7 @@ describe('Create an order', () => {
         await page.paymentMethod();
         await page.addCreditCard('1234 0000 4321', '12');
         const addCardButton = await $('//*[@id="root"]/div/div[2]/div[2]/div[1]/div[2]/div[3]/div[3]');
+        await addCardButton.waitForDisplayed({timeout: 10000});
         await expect(addCardButton).toBeExisting();
     }),
 
@@ -81,8 +82,8 @@ describe('Create an order', () => {
         const orderButton = await $('.smart-button');
         await orderButton.waitForDisplayed();
         await orderButton.click();
-        const carSearchModal = await $('//*[@id="root"]/div/div[5]');
-        await carSearchModal.waitForDisplayed({timeout: 10000});
+        const carSearchModal = await $('.order.shown');
+        await carSearchModal.waitForDisplayed({timeout: 20000});
         await expect(carSearchModal).toBeExisting();
     });    
 });

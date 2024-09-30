@@ -32,7 +32,7 @@ module.exports = {
     //Message for Driver Selector
     messagefield: '#messagefield',
     //Modal for Car Search and Driver Info
-    carSearchModal: '//*[@id="root"]/div/div[5]',
+    carSearchModal: '.order.shown',
 
     // Functions 
     fillAddresses: async function(from, to) {
