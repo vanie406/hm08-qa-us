@@ -81,10 +81,11 @@ describe('Create an order', () => {
         await browser.url(`/`)
         await page.fillAddresses('East 2nd street, 601', '1300 1st St');
         const orderButton = await $('.smart-button');
+        await orderButton.waitForDisplayed({timeout: 10000});
         await orderButton.waitForDisplayed();
         await orderButton.click();
         const carSearchModal = await $('.order.shown');
-        await carSearchModal.waitForDisplayed({timeout: 100000});
+        await carSearchModal.waitForDisplayed({timeout: 10000});
         await expect(carSearchModal).toBeExisting();
     });    
 });
