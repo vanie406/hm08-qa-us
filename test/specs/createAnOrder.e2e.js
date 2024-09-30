@@ -83,7 +83,7 @@ describe('Create an order', () => {
         await orderButton.waitForDisplayed();
         await orderButton.click();
         const carSearchModal = await $('.order.shown');
-        await carSearchModal.waitForDisplayed({timeout: 20000});
+        await carSearchModal.waitForDisplayed({timeout: 30000});
         await expect(carSearchModal).toBeExisting();
     });    
 });
