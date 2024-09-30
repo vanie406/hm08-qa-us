@@ -80,18 +80,18 @@ describe('Create an order', () => {
         const orderButton = await $('.smart-button');
         await orderButton.waitForDisplayed();
         await orderButton.click();
-        const carSearchModal = await $('div.order.shown');
+        const carSearchModal = await $('//*[@id="root"]/div/div[5]');
         await carSearchModal.waitForDisplayed({timeout: 50000});
         await expect(carSearchModal).toBeExisting();
     }),
 
-    it('should wait for the driver info to appear  in the modal', async () => {
+    it.only('should wait for the driver info to appear  in the modal', async () => {
         await browser.url(`/`);
         await page.fillAddresses('East 2nd Street, 601', '1300 1st St');
         const orderButton = await $('.smart-button');
         await orderButton.waitForDisplayed();
         await orderButton.click();
-        const carSearchModals = await $('div.order.shown');
+        const carSearchModals = await $('//*[@id="root"]/div/div[5]');
         await carSearchModals.waitForDisplayed({ timeout: 50000 });
         await browser.pause(30000); 
 

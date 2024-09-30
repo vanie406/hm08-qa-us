@@ -32,7 +32,7 @@ module.exports = {
     //Message for Driver Selector
     messagefield: '#messagefield',
     //Modal for Car Search and Driver Info
-    carSearchModal: 'div.order.shown',
+    carSearchModal: '//*[@id="root"]/div/div[5]',
    //Driver Elements
     driverName: 'div.order-btn-group div:nth-child(2)',
     driverRating: 'div.order-btn-rating',
