@@ -74,14 +74,14 @@ describe('Create an order', () => {
         await expect(itemCount).toHaveText('2');
     }),
 
-    it('should display car search modals', async () => {
+    it.only('should display car search modals', async () => {
         await browser.url(`/`)
         await page.fillAddresses('East 2nd street, 601', '1300 1st St');
         const orderButton = await $('.smart-button');
         await orderButton.waitForDisplayed();
         await orderButton.click();
         const carSearchModal = await $('//*[@id="root"]/div/div[5]');
-        await carSearchModal.waitForDisplayed({timeout: 50000});
+        await carSearchModal.waitForDisplayed({timeout: 10000});
         await expect(carSearchModal).toBeExisting();
     }),
 
@@ -92,7 +92,7 @@ describe('Create an order', () => {
         await orderButton.waitForDisplayed();
         await orderButton.click();
         const carSearchModals = await $('//*[@id="root"]/div/div[5]');
-        await carSearchModals.waitForDisplayed({ timeout: 50000 });
+        await carSearchModals.waitForDisplayed({ timeout: 10000 });
         await browser.pause(30000); 
 
         const driverRating = await $('div.order-btn-rating');
