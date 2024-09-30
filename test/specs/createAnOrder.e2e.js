@@ -28,7 +28,7 @@ describe('Create an order', () => {
         await expect(await $(`div=${phoneNumber}`)).toBeExisting();
     }),
     
-    it.only('should add a credit card', async () => {
+    it('should add a credit card', async () => {
         await browser.url(`/`)
         await page.fillAddresses('East 2nd Street, 601', '1300 1st St');
         await page.paymentMethod();
