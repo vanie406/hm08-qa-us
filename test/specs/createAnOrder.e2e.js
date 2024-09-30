@@ -85,7 +85,7 @@ describe('Create an order', () => {
         await expect(carSearchModal).toBeExisting();
     }),
 
-    it.only('should wait for the driver info to appear  in the modal', async () => {
+    it('should wait for the driver info to appear  in the modal', async () => {
         await browser.url(`/`);
         await page.fillAddresses('East 2nd Street, 601', '1300 1st St');
         const orderButton = await $('.smart-button');
