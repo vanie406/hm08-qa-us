@@ -10,7 +10,7 @@ exports.config = {
     headless: true,
     capabilities: [
         {
-        maxInstances: 5,
+        maxInstances: 1,
         browserName: 'chrome',
         acceptInsecureCerts: true,
         'goog:chromeOptions': {
@@ -18,11 +18,11 @@ exports.config = {
         }
     },
     {
-        maxInstances: 5,
+        maxInstances: 1,
         browserName: 'firefox',
         acceptInsecureCerts: true,
         'moz:firefoxOptions': {
-            args: ['-headless']
+            args: ['']
         }
     }
 ],
