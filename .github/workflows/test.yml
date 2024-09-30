@@ -24,5 +24,11 @@ jobs:
       run: npm run lint
     - name: Install Firefox
       run: sudo apt-get update && sudo apt-get install -y firefox
+    - name: Install specific Geckodriver version
+      run: |
+        GECKODRIVER_VERSION="v0.35.0" # Replace with desired version
+        wget "https://github.com/mozilla/geckodriver/releases/download/v0.35.0/geckodriver-v0.35.0-linux64.tar.gz"
+        tar -xzf "geckodriver-v0.35.0-linux64.tar.gz"
+        sudo mv geckodriver /usr/local/bin/
     - name: Run tests
       run: npm run wdio
