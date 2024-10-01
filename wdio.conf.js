@@ -10,7 +10,7 @@ exports.config = {
     headless: true,
     capabilities: [
         {
-        maxInstances: 1,
+        maxInstances: 5,
         browserName: 'chrome',
         acceptInsecureCerts: true,
         'goog:chromeOptions': {
@@ -18,11 +18,11 @@ exports.config = {
         }
     },
     {
-        maxInstances: 1,
+        maxInstances: 5,
         browserName: 'firefox',
         acceptInsecureCerts: true,
         'moz:firefoxOptions': {
-            args: ['']
+            args: []
         }
     }
 ],
@@ -42,6 +42,6 @@ exports.config = {
     mochaOpts: {
         ui: 'bdd',
         retries: 2,
-        timeout: 120000
+        timeout: 60000
     },
 }
